@@ -1,0 +1,15 @@
+h3{
+    background-color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+p{
+    font-size: 30px;
+    /*this is how to comment in css*/
+    /*border property*/
+    border: 5px solid rgb(0, 0, 255);
+    /*space between text and border*/
+    padding: 30px;
+    /*space outside the border*/
+    margin: 50px;
+}
