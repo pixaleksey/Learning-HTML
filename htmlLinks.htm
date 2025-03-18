@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML CSS</title>
+        <!--internal - css in style element in head applies to this single page-->
+        <style>
+            h1{color: blue;}
+            p{background-color: black;}
+        </style>
+        <!--external - using file type .cc defines styling for multiple pages where it is referenced-->
+        <!--relative path of stylesheet inside same folder as current page-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--CSS = Cascading style sheets
+            used to format the layout of page(s)
+            controls color, font, spacing between elements, positioning and layout etc.-->
+        <!--can control layout of multiple pages from one place-->
+        <!-- types of CSS:
+            inline - using style attribute inside HTMl element-->
+        <h1 id="linkcss">Inline CSS:</h1>
+        <!--INLINE overwrites external-->
+        <h3 style="color: blue;">A Blue heading</h3>
+        <p style="color: red;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel felis nulla. Cras aliquet imperdiet nunc vitae tempor. Phasellus sem nunc, hendrerit non egestas ac, egestas vitae orci. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas sed nisi non neque suscipit consectetur quis sed felis. Curabitur in malesuada mauris. Vestibulum quis commodo augue. Duis convallis eget turpis ac blandit. Duis vulputate nunc sed felis mattis aliquet. Nam in sapien in ipsum ultricies imperdiet at vel nulla.</p>
+    </body>
+</html>
