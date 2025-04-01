@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Images</title>
+        <style>
+            p{
+                margin: 50px 50px 300px 50px;
+            }
+            /*
+            body{
+            background-image:url('img/someimage.jpeg');
+            background-repeat:no-repeat; (image wont repeat)
+            background-size:cover; (image will cover the entire element)
+            background-attachment:fixed; (entire element is covered)
+            }*/
+        </style>
+    </head>
+    <body>
+        <h1>HTML Images Syntax</h1>
+        <!--syntax for img tag to embed (linked) an image
+        <img> tag is empty
+        two required attributes src(path to image) and alt(alternate text - used by screen readers, broken links, or slow connection etc.)-->
+        <img src="img/img_girl.jpg" alt="Image of girl to show syntax for image tag.">
+
+        <h1>Image Size - Width & Height</h1>
+        <img src="img/img_chania.jpg" alt="Image of a house." style="width: 300px; height: 400px">
+        <!--alternative use of width height attributes-->
+        <img src="img/pic_trulli.jpg" alt="Image of a trulli." width="300px" height="400px">
+        <!--html allows animated gifs-->
+        <h1>Animated Images</h1>
+        <img src="img/giphy.gif" alt="A gif of bulobosaur bouncing." width="200px" height="200px">
+        <!--Self-explanatory-->
+        <h1>Image as a Link</h1>
+        <a href="htmlLinks.htm"><img src="img/linkimg1.jpg" alt="A snip of code for a image a link."></a>
+
+        <!--the float attribute-->
+        <h1>Image Floating</h1>
+        <p><img src="img/img_girl.jpg" alt="Girl image for floating right." style="float: right; width: 200px; height: 200px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        <p><img src="img/img_girl.jpg" alt="Girl image for floating left." style="float: left; height: 200px; width: 200px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+        <h1>Image map</h1>
+        <!-- create links/responses to parts of an image 
+         usemap attribute names the image map and creates relationship to image-->
+        <img src="img/imgmap.jpg" alt="Computer for image map demo." usemap="#theMap" width="400px" height="400px">
+        <!--create the image map and link with name attribute-->
+        <map name="theMap">
+            <!--create the clickable area-->
+            <!--FYI using paint or some photo editing software at scale can help with coords-->
+            <!--available values for shape attribute: rect, circle, poly, default-->
+            <area shape="rect" coords="289,171,333,243" href="www.google.com" alt="iphone">
+            <area shape="circle" coords="340,291,44" href="www.google.com" alt="the coffee">
+        </map>
+
+        <h1>Background Images</h1>
+        <!--back-image property with url() value sets a image-->
+        <!--to avoid a repeat use background-repeat: with no-repeat value-->
+        <p style="background-image: url(img/imgmap.jpg); color:white;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+        <h1>HTML picture Element</h1>
+        <!--picture element picks a image srcset when media criteria is met otherwise it loads image src
+        (if browser doesnt support picture element img child will also load)-->
+        <picture>
+            <source media="(min-width:650px)" srcset="img/img_chania.jpg">
+            <source media="(min-width:450px)" srcset="img/img_girl.jpg">
+            <img src="img/pic_trulli.jpg">
+        </picture>
+        <!--common use is add images of all formats to ensure supported format is loaded-->
+    </body>
+</html>
